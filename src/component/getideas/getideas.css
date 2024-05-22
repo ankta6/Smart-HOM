@@ -1,0 +1,78 @@
+/* Main container for the products */
+.product-container {
+  padding: 20px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styling for the main heading */
+.product-container h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container for each product item */
+.product-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 300px;
+  max-width: 300px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for each product item */
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for each product heading */
+.product-heading {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Styling for product images */
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for product images */
+.product-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Styling for the product description text */
+.product-description {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .product-item {
+    flex: 1 1 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-item {
+    flex: 1 1 22%;
+  }
+}

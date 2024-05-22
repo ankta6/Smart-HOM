@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.right {
+  flex: 1;
+  padding: 25px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+h1 {
+  margin: 0;
+  padding: 0 0 10px;
+  color: #333;
+  font-size: 32px;
+}
+
+h2 {
+  margin: 0;
+  padding: 0 0 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+.field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 14px;
+}
+
+textarea.field {
+  height: 150px;
+  resize: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+}
+
+.error {
+  color: #ff0000;
+  font-size: 12px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .contact-box {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .left, .right {
+    flex: 1;
+  }
+
+  .left {
+    height: 200px;
+  }
+
+  .right {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-box {
+    flex-direction: column-reverse;
+  }
+
+  .left {
+    height: 150px;
+  }
+
+  .field {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

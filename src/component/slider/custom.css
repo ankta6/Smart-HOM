@@ -1,0 +1,176 @@
+/* General Slider Container */
+.container__slider {
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  height: 800px; /* Adjust height as needed */
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: black;
+}
+
+/* Image Container */
+.image-container {
+  text-align: center; /* Center the image and title */
+  margin: 10px; /* Add some space around each image container */
+}
+
+/* Image Styling */
+.image-container img {
+  max-width: 100%; /* Make sure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Title Styling */
+.image-container h3 {
+  margin-top: 10px; /* Add some space between the image and the title */
+  font-size: 1.2em; /* Adjust the font size as needed */
+  color: white; /* Ensure the title is visible on a black background */
+}
+
+/* Slider Navigation Buttons */
+.container__slider > button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  color: whitesmoke;
+  font-size: 24px;
+}
+
+.container__slider > button:active {
+  color: black;
+}
+
+.slider__btn-next {
+  position: absolute;
+  right: 0;
+}
+
+.slider__btn-prev {
+  position: absolute;
+  left: 0;
+}
+
+/* Slider Links */
+.container__slider__links {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container__slider__links-small {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 50%;
+  outline: none;
+  border: 0;
+  background-color: white;
+  border: 1px solid grey;
+  transition: background-color 1s ease;
+  margin: 0 2px;
+}
+
+.container__slider__links-small-active {
+  background-color: black;
+}
+
+/* Slider Items */
+.slider__item {
+  box-sizing: border-box;
+  min-width: 100%;
+  height: 100%; /* Ensure slider items fill the container height */
+  overflow: hidden;
+  object-fit: cover;
+  transform: translateX(0);
+  transition: transform 1s ease;
+}
+
+.slider__item-active-1 {
+  transform: translateX(0);
+}
+
+.slider__item-active-2 {
+  transform: translateX(-100%);
+}
+
+.slider__item-active-3 {
+  transform: translateX(-200%);
+}
+
+.slider__item-active-4 {
+  transform: translateX(-300%);
+}
+
+.slider__item-active-5 {
+  transform: translateX(-300%);
+}
+
+.slider__item-active-6 {
+  transform: translateX(-300%);
+}
+
+.slider__item-active-7 {
+  transform: translateX(-300%);
+}
+
+/* Slider Item Image */
+.slider__item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .container__slider {
+    height: 500px; /* Adjust height for smaller screens */
+  }
+
+  .image-container h3 {
+    font-size: 1.1em; /* Adjust title font size */
+  }
+}
+
+@media (max-width: 992px) {
+  .container__slider {
+    height: 700px; /* Adjust height for smaller screens */
+  }
+
+  .image-container h3 {
+    font-size: 1em; /* Adjust title font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .container__slider {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+
+  .image-container h3 {
+    font-size: 0.9em; /* Adjust title font size */
+  }
+
+  .container__slider > button {
+    font-size: 20px; /* Adjust button size */
+  }
+}
+
+@media (max-width: 576px) {
+  .container__slider {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+
+  .image-container h3 {
+    font-size: 0.8em; /* Adjust title font size */
+  }
+
+  .container__slider > button {
+    font-size: 18px; /* Adjust button size */
+  }
+}

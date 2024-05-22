@@ -1,0 +1,133 @@
+/* Navbar.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; /* Ensure navbar is above other content */
+  transition: background-color 0.3s;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: center; /* Center the list items horizontally */
+}
+
+.nav-links li {
+  margin: 0 40px; /* Adjust margin as needed */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* navbar.css */
+
+/* Add this CSS to style the dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 150px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+ 
+}
+
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+  }
+
+  
+  .nav-links li {
+    margin: 25px 0;
+  }
+
+  .burger {
+    display: table-column;
+    margin: 20px;
+  }
+
+  .nav-active {
+    display: flex;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+.scrolled {
+  background-color: #333 !important;
+}

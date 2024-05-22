@@ -1,0 +1,82 @@
+.idea-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url('https://source.unsplash.com/600x600/?smarthome');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff; /* Ensure text is readable against the background image */
+}
+
+.idea-title {
+  text-align: center;
+  color: #fff; /* Ensure title is readable */
+}
+
+.ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.ideas-ideas {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  color: #000; /* Ensure text inside the box is readable */
+}
+
+.ideas-ideas:hover {
+  transform: translateY(-5px);
+}
+
+.heading-idea {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.para-idea {
+  font-size: 16px;
+  color: #666;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .ideas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ideas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ideas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ideas-ideas {
+    padding: 15px;
+  }
+
+  .heading-idea {
+    font-size: 18px;
+  }
+
+  .para-idea {
+    font-size: 14px;
+  }
+}

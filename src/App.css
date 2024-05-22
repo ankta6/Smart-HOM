@@ -1,0 +1,17 @@
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  padding-top: 80px; /* Ensure content doesn't hide behind the navbar */
+}
+
+section {
+  height: 100vh;
+  padding: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+h2 {
+  margin-top: 0;
+}
